@@ -17,7 +17,7 @@ def length_of_longest_substring(str, k):
     print("Str Frequency:", str_frequency[str[window_end]])
 
     if (window_end - window_start + 1 - max_freq_char_count) > k:
-      str_frequency[str[window_end]] -= 1
+      str_frequency[str[window_start]] -= 1
       window_start += 1
       
     count = max(count, window_end - window_start + 1)
